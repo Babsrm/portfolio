@@ -6,8 +6,8 @@
 }
 
 :root{
-  --color-primary: #191d2b;
-  --color-secondary: #27ae60;
+  --color-primary: #030716;
+  --color-secondary: #03204F;
   --color-white: #ffffff;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -61,36 +61,31 @@ section{
 .sect1{
   display: none;
   transform: translateY(0) scale(1);
-  background-color: pink;
 }
 
 .sect2{
   display: none;
   transform: translateY(0) scale(1);
-  background-color: orange;
 }
 
 .sect3{
   display: none;
   transform: translateY(0) scale(1);
-  background-color: green;
 }
 
 .sect4{
   display: none;
   transform: translateY(0) scale(1);
-  background-color: lightblue;
 }
 
 .sect5{
   display: none;
   transform: translateY(0) scale(1);
-  background-color: purple;
 }
 
 .active{
   display: block;
-  animation: scaleAnim 1s ease-in-out;
+  animation: scaleAnim .7s ease-in-out;
   @keyframes scaleAnim {
     0%{
       transform: translateY(-100%) scaleY(0)}
@@ -136,3 +131,65 @@ section{
     }
   }
 }
+
+//Header content
+.header-content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  height: 100%;
+  .left-header{
+    display: flex;
+    align-items: center;
+    position: relative;
+    .h-shape{
+      transition: all .4s ease-in-out;
+      width: 65%;
+      height: 100%;
+      background-color: var(--color-secondary);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      clip-path: polygon(50% 0, 100% 0%, 100% 100%, 50% 100%, 0% 50%);
+    }
+    .image{
+      border-radius: var(--br-sm-2);
+      height: 90%;
+      width: 68%;
+      margin-left: 4rem;
+      background-color: var(--color-black);
+      transition: all .4s ease-in-out;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all .4s ease-in-out;
+        filter:  grayscale(100%);
+        &:hover{
+          filter: grayscale(0)
+        }
+      }
+    }
+  }
+  .right-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 18rem;
+    .name{
+      font-size: 3rem;
+      span{
+        color: #6c7983;
+      }
+    }
+    p{
+      margin: 1.5rem 0;
+      line-height: 3rem;
+    }
+  }
+}
+.profile-pic{
+  clip-path: polygon(50% 0, 90% 0, 90% 100%, 50% 100%, 25% 50%);
+}
+
+//independent components
