@@ -582,7 +582,7 @@ section {
 /*Independed components*/
 .btn-con {
 	display: flex;
-	align-self: flex-start;
+	align-self:center;
 }
 
 .main-btn {
@@ -932,17 +932,6 @@ section {
 		font-size: 4rem;
 	}
 	.profile-pic {
-		clip-path: polygon(
-			20% 0%,
-			80% 0%,
-			100% 20%,
-			100% 60%,
-			72% 74%,
-			28% 74%,
-			0 60%,
-			0% 20%
-		);
-		margin-left: 5rem;
-		margin-top: 5rem;
+		visibility: hidden;
 	}
 }
